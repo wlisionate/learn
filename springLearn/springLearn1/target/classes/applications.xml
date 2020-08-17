@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="duck1" class="model.Duck">
+        <property name="name" value="duck1"></property>
+        <property name="age" value="11"></property>
+    </bean>
+    <bean id="duck2" class="model.Duck">
+        <constructor-arg name="name" value="duck2"></constructor-arg>
+        <constructor-arg name="age" value="12"></constructor-arg>
+    </bean>
+<!--    <bean id="duck3" class="model.Duck" scope="prototype">-->
+<!--        <property name="name" value="duck3"></property>-->
+<!--        <property name="age" value="13"></property>-->
+<!--    </bean>-->
+<!--    <bean id="duckShop" class="model.DuckShop">-->
+<!--        <property name="ducks">-->
+<!--            <list>-->
+<!--                <ref bean="duck1"/>-->
+<!--                <ref bean="duck2"/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--&lt;!&ndash;    静态方法创建&ndash;&gt;-->
+<!--    <bean id="duck5" class="model.DuckFactory" factory-method="create">-->
+<!--    </bean>-->
+<!--&lt;!&ndash;    实例化对象创建&ndash;&gt;-->
+<!--    <bean id="duckFactory" class="model.DuckFactory"/>-->
+<!--    <bean id="duck6" factory-bean="duckFactory" factory-method="create2">-->
+<!--    </bean>-->
+
+    <bean id="class" class="model.Test"/>
+    <context:component-scan base-package="scan"></context:component-scan>
+</beans>
